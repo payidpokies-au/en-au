@@ -1,0 +1,18 @@
+addEventListener('fetch', event => {
+  const url = new URL(event.request.url);
+  
+  if (url.pathname === '/sitemap.xml') {
+    event.respondWith(new Response(sitemapXML, {
+      headers: { 'Content-Type': 'application/xml' }
+    }));
+  } else if (url.pathname === '/robots.txt') {
+    event.respondWith(new Response(robotsTXT, {
+      headers: { 'Content-Type': 'text/plain' }
+    }));
+  } else {
+    // Return HTML utama Anda di sini
+  }
+});
+
+const sitemapXML = ` isi dari sitemap.xml yang saya buat di atas `;
+const robotsTXT = ` isi dari robots.txt yang saya buat di atas `;
