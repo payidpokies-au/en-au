@@ -1,0 +1,28 @@
+import datetime
+
+# Define the sitemap content
+sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://en-au.payid-pokies13.workers.dev/</loc>
+      <lastmod>{datetime.date.today().isoformat()}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+</urlset>"""
+
+# Define the robots.txt content
+robots_content = """User-agent: *
+Allow: /
+
+# Sitemap link
+Sitemap: https://en-au.payid-pokies13.workers.dev/sitemap.xml
+"""
+
+# Save sitemap.xml
+with open("sitemap.xml", "w", encoding="utf-8") as f:
+    f.write(sitemap_content)
+
+# Save robots.txt
+with open("robots.txt", "w", encoding="utf-8") as f:
+    f.write(robots_content)
