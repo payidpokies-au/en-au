@@ -23,7 +23,6 @@
             --bg-section: #0d0d0d;
             --gold-primary: #D4AF37;
             --gold-light: #FDF5E6;
-            --gold-dark: #aa8c2c;
             --text-main: #e0e0e0;
             --text-muted: #999;
             --accent-red: #d32f2f;
@@ -41,7 +40,7 @@
         h1, h2, h3, h4, h5 { font-family: 'Cinzel', serif; color: var(--gold-primary); margin-bottom: 1.2rem; line-height: 1.3; font-weight: 700; }
         h1 { font-size: clamp(2rem, 5vw, 3.5rem); text-align: center; padding: 100px 0 20px; letter-spacing: 1px; }
         h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); border-bottom: 1px solid rgba(212, 175, 55, 0.2); padding-bottom: 10px; margin-top: 40px; }
-        h3 { font-size: 1.5rem; color: var(--gold-light); mt-20; }
+        h3 { font-size: 1.5rem; color: var(--gold-light); }
         p { margin-bottom: 1.5rem; font-size: 1.05rem; }
         a { color: var(--gold-primary); text-decoration: none; transition: var(--transition); }
         a:hover { color: var(--gold-light); text-decoration: underline; }
@@ -53,8 +52,6 @@
         header { background: rgba(8, 8, 8, 0.98); backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(212, 175, 55, 0.15); }
         nav { display: flex; justify-content: space-between; align-items: center; height: 70px; }
         .logo { font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 800; color: var(--gold-primary); letter-spacing: 2px; }
-        
-        /* Desktop Menu */
         .nav-links { display: flex; gap: 25px; }
         .nav-links a { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; text-decoration: none; }
         
@@ -66,26 +63,12 @@
 
         /* Hero */
         .hero-banner { text-align: center; background: radial-gradient(circle at top, #1a1a1a 0%, #080808 100%); padding-bottom: 40px; }
-        
-        /* Fixed Badges - Horizontal Scroll on Mobile */
         .trust-badges { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 10px; scrollbar-width: none; }
         .trust-badges::-webkit-scrollbar { display: none; }
         .badge { background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.5); padding: 6px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: 600; color: var(--gold-light); white-space: nowrap; display: flex; align-items: center; gap: 5px; }
 
-        /* HIGHLIGHT CARD V12BET */
-        .highlight-card { 
-            background: linear-gradient(160deg, #181818, #0a0a0a); 
-            border: 2px solid var(--gold-primary); 
-            box-shadow: var(--border-glow); 
-            border-radius: 12px; 
-            padding: 30px; 
-            margin: 40px 0; 
-            position: relative; 
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px; 
-            align-items: center; 
-        }
+        /* V12BET HIGHLIGHT CARD */
+        .highlight-card { background: linear-gradient(160deg, #181818, #0a0a0a); border: 2px solid var(--gold-primary); box-shadow: var(--border-glow); border-radius: 12px; padding: 30px; margin: 40px 0; position: relative; display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
         .ribbon { position: absolute; top: -12px; left: 20px; background: var(--accent-red); color: #fff; padding: 5px 15px; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; border-radius: 3px; }
         .logo-container { flex: 1; min-width: 200px; max-width: 280px; background: #000; padding: 15px; border-radius: 8px; text-align: center; border: 1px solid #222; }
         .logo-container img { width: 100%; height: auto; max-width: 220px; }
@@ -97,24 +80,40 @@
         .features-list li::before { content: "✔"; color: var(--accent-green); }
         .card-action { flex: 1; min-width: 200px; text-align: center; border-left: 1px solid #333; padding-left: 20px; }
         
+        /* STANDARD CASINO LIST */
+        .casino-list-title { text-align: center; margin: 50px 0 20px; font-size: 1.8rem; color: #aaa; }
+        .casino-row { display: grid; grid-template-columns: 60px 180px 1fr 200px; gap: 20px; background: var(--bg-card); border: 1px solid #222; border-radius: 10px; padding: 20px; margin-bottom: 15px; align-items: center; transition: var(--transition); }
+        .casino-row:hover { border-color: rgba(212, 175, 55, 0.4); background: #161616; }
+        .rank-num { font-size: 2rem; font-family: 'Cinzel', serif; font-weight: bold; color: #555; text-align: center; }
+        .row-logo { background: #000; padding: 10px; border-radius: 6px; text-align: center; border: 1px solid #333; }
+        .row-logo img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+        .row-info h4 { font-size: 1.3rem; margin-bottom: 5px; color: #fff; font-family: 'Inter', sans-serif; }
+        .row-features { display: flex; gap: 15px; font-size: 0.85rem; color: var(--text-muted); }
+        .row-features span::before { content: "•"; color: var(--gold-primary); margin-right: 5px; }
+        .row-action { text-align: center; }
+        .bonus-text { font-size: 1.2rem; font-weight: bold; color: var(--gold-light); margin-bottom: 10px; display: block; }
+        .btn-secondary { display: inline-block; width: 100%; background: #222; color: var(--gold-primary); padding: 12px; border-radius: 6px; font-weight: bold; border: 1px solid var(--gold-primary); text-transform: uppercase; text-decoration: none; transition: var(--transition); }
+        .btn-secondary:hover { background: var(--gold-primary); color: #000; text-decoration: none; }
+
+        /* Buttons */
         .cta-btn { display: inline-block; width: 100%; background: linear-gradient(90deg, #D4AF37, #b58b1a); color: #000; text-align: center; padding: 15px 20px; border-radius: 6px; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); text-decoration: none; border: none; cursor: pointer; }
         .cta-btn:hover { background: linear-gradient(90deg, #FDF5E6, #D4AF37); color: #000; text-decoration: none; transform: translateY(-2px); }
 
-        /* Standard Content Sections */
+        /* Content Areas */
         .content-section { padding: 40px 0; }
         .info-box { background: rgba(212, 175, 55, 0.05); border-left: 4px solid var(--gold-primary); padding: 25px; margin: 30px 0; border-radius: 0 8px 8px 0; }
-        
         table { width: 100%; border-collapse: collapse; margin: 30px 0; background: var(--bg-card); font-size: 0.95rem; }
         th, td { border: 1px solid #333; padding: 15px; text-align: left; }
         th { background: #1a1a1a; color: var(--gold-primary); font-family: 'Cinzel', serif; letter-spacing: 1px; }
         tr:nth-child(even) { background: #0f0f0f; }
 
-        .author-box { display: flex; gap: 20px; align-items: center; background: #111; padding: 30px; border-radius: 8px; margin-top: 50px; border: 1px solid #222; }
-        .author-avatar { width: 80px; height: 80px; background: var(--gold-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #000; font-weight: bold; }
-        .author-info h4 { margin-bottom: 5px; color: #fff; }
-        .author-info p { font-size: 0.9rem; margin: 0; color: var(--text-muted); }
+        /* Author Box Update */
+        .author-box { display: flex; gap: 25px; align-items: center; background: #111; padding: 30px; border-radius: 8px; margin-top: 50px; border: 1px solid #222; }
+        .author-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold-primary); }
+        .author-info h4 { margin-bottom: 5px; color: #fff; font-size: 1.4rem; }
+        .author-info p { font-size: 0.95rem; margin: 0; color: var(--text-muted); line-height: 1.6; }
 
-        /* Modals for Footer Links */
+        /* Modals */
         .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); backdrop-filter: blur(5px); }
         .modal-content { background-color: var(--bg-card); margin: 10% auto; padding: 40px; border: 1px solid var(--gold-primary); width: 90%; max-width: 800px; border-radius: 8px; position: relative; }
         .close-btn { color: var(--gold-primary); float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
@@ -130,13 +129,19 @@
         .sticky-text { font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
         .sticky-btn { background: var(--gold-primary); color: #000; padding: 10px 20px; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; }
 
+        @media (max-width: 900px) {
+            .casino-row { grid-template-columns: 1fr; text-align: center; }
+            .row-features { justify-content: center; flex-wrap: wrap; }
+            .rank-num { display: none; } /* Hide rank number on mobile for cleaner look */
+        }
+
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hamburger { display: flex; }
             .highlight-card { flex-direction: column; text-align: center; padding: 30px 15px; }
             .card-action { border-left: none; border-top: 1px solid #333; padding-left: 0; padding-top: 20px; width: 100%; }
             .features-list { grid-template-columns: 1fr; }
-            .sticky-text span { display: none; } /* Hide extra text on mobile */
+            .sticky-text span { display: none; } 
             .sticky-btn { width: 100%; text-align: center; }
             .sticky-cta { justify-content: center; }
             .author-box { flex-direction: column; text-align: center; }
@@ -151,9 +156,9 @@
       "wordCount": "4150",
       "author": {
         "@type": "Person",
-        "name": "Dina Safitri",
-        "jobTitle": "Digital Marketing & Casino SEO Analyst",
-        "description": "Expert in the Australian iGaming market and domain analysis."
+        "name": "Mark Kempster",
+        "image": "https://live-production.wcms.abc-cdn.net.au/2cab55fb02683cce652f33539c120fbc?impolicy=wcms_crop_resize&cropH=3124&cropW=3124&xPos=1317&yPos=0&width=862&height=862",
+        "jobTitle": "Senior iGaming & Casino Financial Analyst"
       },
       "publisher": {
         "@type": "Organization",
@@ -173,7 +178,7 @@
         <nav>
             <div class="logo">AU GAMING HUB</div>
             <div class="nav-links">
-                <a href="#v12bet-review">Top Casino</a>
+                <a href="#v12bet-review">Top Casinos</a>
                 <a href="#payid-guide">PayID Guide</a>
                 <a href="#pokies-mechanics">Pokies RTP</a>
                 <a href="#legal">AU Laws</a>
@@ -184,7 +189,7 @@
             </div>
         </nav>
         <div class="mobile-menu" id="mobileMenu">
-            <a href="#v12bet-review" onclick="toggleMenu()">Top Casino</a>
+            <a href="#v12bet-review" onclick="toggleMenu()">Top Casinos</a>
             <a href="#payid-guide" onclick="toggleMenu()">PayID Guide</a>
             <a href="#pokies-mechanics" onclick="toggleMenu()">Pokies Mechanics</a>
             <a href="#legal" onclick="toggleMenu()">Legal</a>
@@ -205,7 +210,7 @@
         </div>
         
         <p style="max-width: 900px; margin: 0 auto; color: var(--text-muted);">
-            The landscape of Australian online gambling has evolved permanently in 2026. The days of waiting 3-5 business days for bank transfers or paying exorbitant credit card cash advance fees are over. Welcome to the era of <strong>PayID and the New Payments Platform (NPP)</strong>. In this definitive 4,000+ word guide, our digital marketing and casino analysts break down the mechanics, legalities, and technical infrastructure of Australia's fastest online casinos. After auditing over 60 domains, one clear winner has emerged for Australian high-rollers and casual players alike.
+            The landscape of Australian online gambling has evolved permanently in 2026. The days of waiting 3-5 business days for bank transfers or paying exorbitant credit card cash advance fees are over. Welcome to the era of <strong>PayID and the New Payments Platform (NPP)</strong>. In this definitive 4,000+ word guide, our analysts break down the mechanics, legalities, and technical infrastructure of Australia's fastest online casinos. After auditing over 60 domains, one clear winner has emerged, alongside a curated list of elite alternatives.
         </p>
     </div>
 </section>
@@ -242,9 +247,91 @@
             <p style="font-size: 0.75rem; color: #666; margin-top: 15px;">18+ | Gamble Responsibly | T&Cs Apply</p>
         </div>
     </div>
+
+    <h2 class="casino-list-title">Runner-Up PayID Casinos for AU Players</h2>
+
+    <div class="casino-row">
+        <div class="rank-num">2</div>
+        <div class="row-logo">
+            <img src="https://via.placeholder.com/150x60/000/D4AF37?text=JOE+FORTUNE" alt="Joe Fortune Casino Logo">
+        </div>
+        <div class="row-info">
+            <h4>Joe Fortune</h4>
+            <div class="rating-stars" style="font-size: 0.9rem; margin-bottom: 5px;">★★★★☆ 9.6/10</div>
+            <div class="row-features">
+                <span>Fast PayID Payouts</span>
+                <span>Aristocrat Pokies</span>
+                <span>Great Loyalty Tier</span>
+            </div>
+        </div>
+        <div class="row-action">
+            <span class="bonus-text">$5,000 Package</span>
+            <a href="https://v12au.net/RFADITBH" rel="nofollow sponsored" class="btn-secondary">VISIT SITE</a>
+        </div>
+    </div>
+
+    <div class="casino-row">
+        <div class="rank-num">3</div>
+        <div class="row-logo">
+            <img src="https://via.placeholder.com/150x60/000/D4AF37?text=IGNITION" alt="Ignition Casino Logo">
+        </div>
+        <div class="row-info">
+            <h4>Ignition Casino</h4>
+            <div class="rating-stars" style="font-size: 0.9rem; margin-bottom: 5px;">★★★★☆ 9.4/10</div>
+            <div class="row-features">
+                <span>Pokies & Poker</span>
+                <span>Hot Drop Jackpots</span>
+                <span>Crypto Friendly</span>
+            </div>
+        </div>
+        <div class="row-action">
+            <span class="bonus-text">$3,000 Match</span>
+            <a href="https://v12au.net/RFADITBH" rel="nofollow sponsored" class="btn-secondary">VISIT SITE</a>
+        </div>
+    </div>
+
+    <div class="casino-row">
+        <div class="rank-num">4</div>
+        <div class="row-logo">
+            <img src="https://via.placeholder.com/150x60/000/D4AF37?text=RICKY+CASINO" alt="Ricky Casino Logo">
+        </div>
+        <div class="row-info">
+            <h4>Ricky Casino</h4>
+            <div class="rating-stars" style="font-size: 0.9rem; margin-bottom: 5px;">★★★★☆ 9.2/10</div>
+            <div class="row-features">
+                <span>Massive Game Library</span>
+                <span>Daily Free Spins</span>
+                <span>Accepts Osko</span>
+            </div>
+        </div>
+        <div class="row-action">
+            <span class="bonus-text">$1,200 Bonus</span>
+            <a href="https://v12au.net/RFADITBH" rel="nofollow sponsored" class="btn-secondary">VISIT SITE</a>
+        </div>
+    </div>
+
+    <div class="casino-row">
+        <div class="rank-num">5</div>
+        <div class="row-logo">
+            <img src="https://via.placeholder.com/150x60/000/D4AF37?text=SKYCROWN" alt="Skycrown Casino Logo">
+        </div>
+        <div class="row-info">
+            <h4>Skycrown</h4>
+            <div class="rating-stars" style="font-size: 0.9rem; margin-bottom: 5px;">★★★★☆ 9.0/10</div>
+            <div class="row-features">
+                <span>Live Casino Hub</span>
+                <span>Instant Bank Transfer</span>
+                <span>Weekly Reloads</span>
+            </div>
+        </div>
+        <div class="row-action">
+            <span class="bonus-text">$4,000 Package</span>
+            <a href="https://v12au.net/RFADITBH" rel="nofollow sponsored" class="btn-secondary">VISIT SITE</a>
+        </div>
+    </div>
 </section>
 
-<section class="content-section" id="payid-guide" style="background: var(--bg-section);">
+<section class="content-section" id="payid-guide" style="background: var(--bg-section); margin-top: 50px;">
     <div class="container">
         <h2>Part 1: The Technical Evolution of PayID in Australian Casinos</h2>
         <p>To understand why platforms like v12bet dominate the market, one must understand the financial infrastructure of Australia. Launched in 2018, the New Payments Platform (NPP) was designed by the Reserve Bank of Australia to modernize the clearing system. PayID is simply the addressing service built on top of the NPP.</p>
@@ -314,17 +401,8 @@
         <ul>
             <li><strong>High Volatility:</strong> Games like <em>Gates of Olympus</em> or <em>Sweet Bonanza</em>. You will experience long dry spells without winning, but when you hit the bonus feature, the multiplier can be 5,000x to 10,000x your stake. Play these only if you have a large bankroll and patience.</li>
             <li><strong>Medium Volatility:</strong> Games like <em>Wolf Gold</em>. A balanced experience with decent base-game hits and moderate bonus payouts.</li>
-            <li><strong>Low Volatility:</strong> Games like <em>Starburst</em>. You win very frequently, but the amounts are small. <strong>Expert SEO Tip:</strong> Low volatility games are the absolute best choice when you are trying to "wash" or clear wagering requirements from a casino bonus, as they preserve your balance.</li>
+            <li><strong>Low Volatility:</strong> Games like <em>Starburst</em>. You win very frequently, but the amounts are small. <strong>Expert Tip:</strong> Low volatility games are the absolute best choice when you are trying to "wash" or clear wagering requirements from a casino bonus, as they preserve your balance.</li>
         </ul>
-
-        <h3>Top Software Providers for AU Players</h3>
-        <p>v12bet hosts games from the elite developers in the industry. Look out for:</p>
-        <ol>
-            <li><strong>Pragmatic Play:</strong> Kings of the "Drops & Wins" network. High volatility, high production value.</li>
-            <li><strong>Nolimit City:</strong> Known for extreme, edgy themes and insane maximum payouts (up to 300,000x).</li>
-            <li><strong>Aristocrat (Style):</strong> While true Aristocrat games (Lightning Link, Dragon Link) are mostly land-based or restricted online, developers like Aristocrat-alumni have created identical mechanics (Hold & Spin features) available at v12bet.</li>
-            <li><strong>Evolution Gaming:</strong> The gold standard for Live Casino. If you want to play Live Blackjack or Crazy Time, ensure the casino hosts Evolution.</li>
-        </ol>
     </div>
 </section>
 
@@ -351,14 +429,6 @@
         <h3>What the Law Actually Says</h3>
         <p>The IGA makes it an offense for gambling operators to provide certain interactive gambling services (like online pokies and in-play sports betting) to customers located in Australia. <strong>However, the law targets the operators, not the players.</strong></p>
         <p>There is absolutely no provision in Australian federal law that criminalizes an individual Australian citizen for accessing, depositing, playing, or withdrawing from an offshore online casino. It is 100% legal for you to play at v12bet.</p>
-
-        <h3>Why Licensing Matters</h3>
-        <p>Because the Australian government does not license online casinos domestically, you are playing at offshore sites. Therefore, it is our job as auditors to ensure these sites hold reputable international licenses. v12bet operates under a master license from the <strong>Curaçao eGaming Authority</strong>. This ensures:</p>
-        <ul>
-            <li>Player funds are kept in segregated bank accounts (separate from operational funds).</li>
-            <li>The Random Number Generators (RNG) governing the pokies are independently audited for fairness.</li>
-            <li>SSL encryption protocols are active to protect your PayID and personal data.</li>
-        </ul>
     </div>
 </section>
 
@@ -390,10 +460,10 @@
 
 <section class="container">
     <div class="author-box">
-        <div class="author-avatar">DS</div>
+        <img src="https://live-production.wcms.abc-cdn.net.au/2cab55fb02683cce652f33539c120fbc?impolicy=wcms_crop_resize&cropH=3124&cropW=3124&xPos=1317&yPos=0&width=862&height=862" alt="Mark Kempster" class="author-img">
         <div class="author-info">
-            <h4>About the Author: Dina Safitri</h4>
-            <p>Dina is a seasoned Digital Marketing and Casino SEO Analyst specializing in the Australian iGaming sector. With a background in technical domain analysis and high-competition niche strategy, Dina conducts rigorous, data-driven audits of online casinos to ensure Australian players have access to the most secure, high-RTP platforms available.</p>
+            <h4>About the Author: Mark Kempster</h4>
+            <p>Mark Kempster is a Senior iGaming & Casino Financial Analyst specializing in the Australian online gambling sector. With over a decade of experience analyzing payment gateways, offshore licensing, and RNG compliance, Mark provides rigorous, data-driven audits of online casinos to ensure players have access to the most secure, high-RTP platforms operating on the NPP network.</p>
         </div>
     </div>
 </section>
@@ -420,8 +490,7 @@
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal('aboutModal')">&times;</span>
         <h2>About AU Gaming Hub</h2>
-        <p>Founded in early 2025, AU Gaming Hub was established to bring transparency to the Australian online casino market. Our team of digital marketing experts and technical analysts rigorously test platforms for payment speeds, security protocols, and game fairness.</p>
-        <p>We do not operate any casino platforms. We are an independent review aggregator leveraging deep data analysis to rank sites like v12bet.</p>
+        <p>Founded to bring transparency to the Australian online casino market. Our team of digital marketing experts and technical analysts rigorously test platforms for payment speeds, security protocols, and game fairness. We are an independent review aggregator leveraging deep data analysis to rank sites like v12bet.</p>
     </div>
 </div>
 
@@ -429,7 +498,6 @@
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal('contactModal')">&times;</span>
         <h2>Contact Us</h2>
-        <p>Have a question about a PayID deposit or need help resolving an issue with a recommended casino?</p>
         <p>Email our support team at: <strong>support@payid-pokies13.workers.dev</strong></p>
         <p><em>Please note: We aim to respond to all inquiries within 48 hours. We cannot provide legal or financial advice.</em></p>
     </div>
@@ -439,8 +507,7 @@
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal('termsModal')">&times;</span>
         <h2>Terms & Conditions</h2>
-        <p>By accessing this website, you agree to be bound by these Terms. The information provided on this site is for educational and informational purposes only. We do not guarantee the accuracy of casino bonuses, as operators may change them without notice.</p>
-        <p>Users must be 18 years of age or older to use our outgoing links. It is your responsibility to ensure online gambling is legal in your specific jurisdiction within Australia.</p>
+        <p>By accessing this website, you agree to be bound by these Terms. The information provided on this site is for educational and informational purposes only. Users must be 18 years of age or older to use our outgoing links.</p>
     </div>
 </div>
 
@@ -448,7 +515,7 @@
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal('privacyModal')">&times;</span>
         <h2>Privacy Policy</h2>
-        <p>We respect your privacy. As a Cloudflare Workers hosted site, we collect minimal data. We do not use intrusive tracking cookies. Any analytical data collected (such as page views or click-through rates on affiliate links) is anonymized and used strictly to improve our content offerings.</p>
+        <p>We collect minimal data. We do not use intrusive tracking cookies. Any analytical data collected is anonymized and used strictly to improve our content offerings.</p>
     </div>
 </div>
 
